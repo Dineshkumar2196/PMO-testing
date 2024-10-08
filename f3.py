@@ -81,13 +81,13 @@ if uploaded_file is not None:
 
     # Check if the phrase "RISK OF DEATH OR SERIOUS INJURY" is found
     if caution_boxes:
-        st.write("GAS 'RISK OF DEATH OR SERIOUS INJURY' found:")
+        st.write("GAS 'WALES & WEST': Found")
         for bbox in caution_boxes:
             x_min, y_min, x_max, y_max = map(int, bbox)
             # st.write(f"Bounding Box: {bbox}")
             # Optionally draw bounding boxes or display the image as before
     else:
-        st.write("GAS 'RISK OF DEATH OR SERIOUS INJURY' not found in the PDF.")
+        st.write("GAS 'WALES & WEST': Not Found")
 
     # Load the image
     img = cv2.imread(image_path)
